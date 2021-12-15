@@ -5432,6 +5432,7 @@ fsevents@~2.3.2:
     "@pmmmwh/react-refresh-webpack-plugin": ^0.5.0
     "@wojtekmaj/date-utils": ^1.0.0
     "@wojtekmaj/react-hooks": ^1.8.0
+    "@viviedu/react-clock": "portal:../"
     babel-loader: ^8.0.0
     css-loader: ^6.0.0
     eslint: ~7.19.0
@@ -5441,7 +5442,6 @@ fsevents@~2.3.2:
     mini-css-extract-plugin: ^2.0.0
     prop-types: ^15.6.0
     react: ^17.0.0
-    react-clock: "portal:../"
     react-dom: ^17.0.0
     react-refresh: ^0.10.0
     style-loader: ^3.0.0
@@ -5451,9 +5451,9 @@ fsevents@~2.3.2:
   languageName: unknown
   linkType: soft
 
-"react-clock@portal:../::locator=react-clock-test-page%40workspace%3A.":
+"@viviedu/react-clock@portal:../::locator=react-clock-test-page%40workspace%3A.":
   version: 0.0.0-use.local
-  resolution: "react-clock@portal:../::locator=react-clock-test-page%40workspace%3A."
+  resolution: "@viviedu/react-clock@portal:../::locator=react-clock-test-page%40workspace%3A."
   dependencies:
     "@wojtekmaj/date-utils": ^1.0.0
     merge-class-names: ^1.1.1

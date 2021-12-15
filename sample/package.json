@@ -14,9 +14,9 @@
   "license": "MIT",
   "dependencies": {
     "@wojtekmaj/react-hooks": "^1.7.0",
+    "@viviedu/react-clock": "latest",
     "prop-types": "^15.6.0",
     "react": "^17.0.0",
-    "react-clock": "latest",
     "react-dom": "^17.0.0"
   },
   "devDependencies": {

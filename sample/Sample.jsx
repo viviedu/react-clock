@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useSetInterval } from '@wojtekmaj/react-hooks';
-import Clock from 'react-clock';
+import Clock from '@viviedu/react-clock';
 
 import './Sample.less';
 

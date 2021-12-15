@@ -1,8 +1,3 @@
-// Type definitions for react-clock 3.0
-// Project: https://github.com/wojtekmaj/react-clock
-// Definitions by: Enmanuel Veras <https://github.com/everas7>
-// Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
-
 export default function Clock(props: ClockProps): JSX.Element;
 export type ClockValue = string | Date;
 export interface ClockProps<T = ClockValue> {

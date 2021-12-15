@@ -4760,6 +4760,7 @@ fsevents@~2.3.2:
     "@babel/preset-env": ^7.15.0
     "@babel/preset-react": ^7.14.0
     "@wojtekmaj/react-hooks": ^1.7.0
+    "@viviedu/react-clock": latest
     babel-loader: ^8.0.0
     css-loader: ^6.0.0
     html-webpack-plugin: ^5.1.0
@@ -4767,7 +4768,6 @@ fsevents@~2.3.2:
     less-loader: ^10.0.0
     prop-types: ^15.6.0
     react: ^17.0.0
-    react-clock: latest
     react-dom: ^17.0.0
     style-loader: ^3.0.0
     webpack: ^5.20.0
@@ -4776,9 +4776,9 @@ fsevents@~2.3.2:
   languageName: unknown
   linkType: soft
 
-"react-clock@npm:latest":
+"@viviedu/react-clock@npm:latest":
   version: 3.0.0
-  resolution: "react-clock@npm:3.0.0"
+  resolution: "@viviedu/react-clock@npm:3.0.0"
   dependencies:
     "@wojtekmaj/date-utils": ^1.0.0
     merge-class-names: ^1.1.1

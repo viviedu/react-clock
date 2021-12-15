@@ -7,19 +7,17 @@
 An analog clock for your React app.
 
 ## tl;dr
-* Install by executing `npm install react-clock` or `yarn add react-clock`.
-* Import by adding `import Clock from 'react-clock'`.
+* Install by executing `npm install @viviedu/react-clock` or `yarn add @viviedu/react-clock`.
+* Import by adding `import Clock from '@viviedu/react-clock'`.
 * Use by adding `<Clock />`.
 
 ## Demo
 
 A minimal demo page can be found in `sample` directory.
 
-[Online demo](http://projects.wojtekmaj.pl/react-clock/) is also available!
-
 ## Installation
 
-Add React-Clock to your project by executing `npm install react-clock` or `yarn add react-clock`.
+Add React-Clock to your project by executing `npm install @viviedu/react-clock` or `yarn add @viviedu/react-clock`.
 
 ### Usage
 
@@ -27,7 +25,7 @@ Here's an example of basic usage:
 
 ```js
 import React, { useEffect, useState } from 'react';
-import Clock from 'react-clock';
+import Clock from '@viviedu/react-clock';
 
 function MyApp() {
   const [value, setValue] = useState(new Date());
@@ -57,7 +55,7 @@ function MyApp() {
 If you want to use default React-Clock styling to build upon it, you can import React-Clock's styles by using:
 
 ```js
-import 'react-clock/dist/Clock.css';
+import '@viviedu/react-clock/dist/Clock.css';
 ```
 
 ## User guide
@@ -97,18 +95,3 @@ Displays a complete clock.
 ## License
 
 The MIT License.
-
-## Author
-
-<table>
-  <tr>
-    <td>
-      <img src="https://github.com/wojtekmaj.png?s=100" width="100">
-    </td>
-    <td>
-      Wojciech Maj<br />
-      <a href="mailto:kontakt@wojtekmaj.pl">kontakt@wojtekmaj.pl</a><br />
-      <a href="https://wojtekmaj.pl">https://wojtekmaj.pl</a>
-    </td>
-  </tr>
-</table>

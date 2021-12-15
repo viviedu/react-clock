@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from 'react';
-import Clock from 'react-clock/src';
-import 'react-clock/src/Clock.less';
+import Clock from '@viviedu/react-clock/src';
+import '@viviedu/react-clock/src/Clock.less';
 import { useSetInterval } from '@wojtekmaj/react-hooks';
 import { getHoursMinutesSeconds } from '@wojtekmaj/date-utils';
 

@@ -25,7 +25,7 @@ module.exports = {
     rules: [
       {
         test: /\.jsx?$/,
-        exclude: /node_modules(?!\/react-clock)/,
+        exclude: /node_modules(?!\/@viviedu\/react-clock)/,
         use: [
           {
             loader: 'babel-loader',

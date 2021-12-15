@@ -5813,9 +5813,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-clock@workspace:.":
+"@viviedu/react-clock@workspace:.":
   version: 0.0.0-use.local
-  resolution: "react-clock@workspace:."
+  resolution: "@viviedu/react-clock@workspace:."
   dependencies:
     "@babel/cli": ^7.15.0
     "@babel/core": ^7.15.0

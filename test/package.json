@@ -15,9 +15,9 @@
   "dependencies": {
     "@wojtekmaj/date-utils": "^1.0.0",
     "@wojtekmaj/react-hooks": "^1.8.0",
+    "@viviedu/react-clock": "portal:../",
     "prop-types": "^15.6.0",
     "react": "^17.0.0",
-    "react-clock": "portal:../",
     "react-dom": "^17.0.0"
   },
   "devDependencies": {
