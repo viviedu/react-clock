@@ -61,6 +61,16 @@ export interface ClockProps<T = ClockValue> {
      */
     minuteMarksWidth?: number | undefined;
     /**
+     * What to multiply each number by (e.g. for a stopwatch).
+     * @default 1
+     */
+    numbersMultiplier?: number | undefined;
+    /**
+     * Whether to take milliseconds into account when calculating the angle of the seconds hand.
+     * @default false
+     */
+    preciseSecondHandAngle?: boolean | undefined;
+    /**
      * Whether hour marks shall be rendered.
      * @default true
      */

@@ -26,6 +26,8 @@ export default function Clock({
   minuteHandWidth = 2,
   minuteMarksLength = 6,
   minuteMarksWidth = 1,
+  numbersMultiplier = 1,
+  preciseSecondHandAngle = false,
   renderHourMarks = true,
   renderMinuteHand = true,
   renderMinuteMarks = true,
@@ -74,7 +76,7 @@ export default function Clock({
           angle={i * 30}
           length={hourMarksLength}
           name="hour"
-          number={renderNumbers ? i : null}
+          number={renderNumbers ? (i * numbersMultiplier) : null}
           width={hourMarksWidth}
         />,
       );
@@ -138,7 +140,7 @@ export default function Clock({
 
     const angle = value ? (
       (getMinutes(value) * 360)
-      + (getSeconds(value) * 6)
+      + (getSeconds(value) * 6 + (preciseSecondHandAngle ? value.getMilliseconds() : 0))
     ) : 0;
 
     return (
@@ -184,6 +186,8 @@ Clock.propTypes = {
   minuteHandWidth: isHandWidth,
   minuteMarksLength: isMarkLength,
   minuteMarksWidth: isMarkWidth,
+  numbersMultiplier: PropTypes.number,
+  preciseSecondHandAngle: PropTypes.bool,
   renderHourMarks: PropTypes.bool,
   renderMinuteHand: PropTypes.bool,
   renderMinuteMarks: PropTypes.bool,
@@ -193,8 +197,5 @@ Clock.propTypes = {
   secondHandOppositeLength: isOppositeHandLength,
   secondHandWidth: isHandWidth,
   size: PropTypes.number,
-  value: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.instanceOf(Date),
-  ]),
+  value: PropTypes.instanceOf(Date),
 };

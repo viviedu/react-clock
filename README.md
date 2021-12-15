@@ -81,6 +81,8 @@ Displays a complete clock.
 |minuteHandWidth|Minute hand width, in pixels.|`2`|`3`|
 |minuteMarksLength|Minute marks length, in %.|`6`|`8`|
 |minuteMarksWidth|Minute marks width, in pixels.|`1`|`2`|
+|numbersMultiplier|What to multiply each number by (e.g. for a stopwatch).|`1`|`5`|
+|preciseSecondHandAngle|Whether to take milliseconds into account when calculating the angle of the seconds hand.|`false`|`true`|
 |renderHourMarks|Whether hour marks shall be rendered.|`true`|`false`|
 |renderMinuteHand|Whether minute hand shall be rendered.|`true`|`false`|
 |renderMinuteMarks|Whether minute marks shall be rendered.|`true`|`false`|
