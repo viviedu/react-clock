@@ -82,6 +82,7 @@ Displays a complete clock.
 |numbersMultiplier|What to multiply each number by (e.g. for a stopwatch).|`1`|`5`|
 |preciseSecondHandAngle|Whether to take milliseconds into account when calculating the angle of the seconds hand.|`false`|`true`|
 |renderHourMarks|Whether hour marks shall be rendered.|`true`|`false`|
+|renderHourHand|Whether hour hand shall be rendered.|`true`|`false`|
 |renderMinuteHand|Whether minute hand shall be rendered.|`true`|`false`|
 |renderMinuteMarks|Whether minute marks shall be rendered.|`true`|`false`|
 |renderNumbers|Whether numbers shall be rendered.|`false`|`true`|

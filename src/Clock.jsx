@@ -29,6 +29,7 @@ export default function Clock({
   numbersMultiplier = 1,
   preciseSecondHandAngle = false,
   renderHourMarks = true,
+  renderHourHand = true,
   renderMinuteHand = true,
   renderMinuteMarks = true,
   renderNumbers,
@@ -94,6 +95,10 @@ export default function Clock({
   }
 
   function renderHourHandFn() {
+    if (!renderHourHand) {
+      return null;
+    }
+
     const angle = value ? (
       (getHours(value) * 30)
       + (getMinutes(value) / 2)
@@ -189,6 +194,7 @@ Clock.propTypes = {
   minuteMarksWidth: isMarkWidth,
   numbersMultiplier: PropTypes.number,
   preciseSecondHandAngle: PropTypes.bool,
+  renderHourHand: PropTypes.bool,
   renderHourMarks: PropTypes.bool,
   renderMinuteHand: PropTypes.bool,
   renderMinuteMarks: PropTypes.bool,

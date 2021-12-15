@@ -71,6 +71,11 @@ export interface ClockProps<T = ClockValue> {
      */
     renderHourMarks?: boolean | undefined;
     /**
+     * Whether hour hand shall be rendered.
+     * @default true
+     */
+     renderHourHand?: boolean | undefined;
+    /**
      * Whether minute hand shall be rendered.
      * @default true
      */
