@@ -138,9 +138,10 @@ export default function Clock({
       return null;
     }
 
+    const milliseconds = preciseSecondHandAngle ? value.getMilliseconds() / 1000 : 0;
     const angle = value ? (
       (getMinutes(value) * 360)
-      + (getSeconds(value) * 6 + (preciseSecondHandAngle ? value.getMilliseconds() : 0))
+      + ((getSeconds(value) + milliseconds) * 6)
     ) : 0;
 
     return (
