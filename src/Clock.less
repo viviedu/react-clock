@@ -44,14 +44,12 @@
     right: 50%;
     
     &__body {
-      background-color: @mark-colour;
       position: absolute;
+      background-color: black;
       transform: translateX(-50%);
     }
     
     &__number {
-      color: @primary-black;
-      font-size: 32px;
       position: absolute;
       left: -40px;
       width: 80px;
@@ -92,5 +90,23 @@
     box-shadow: inset 20px 13px 16px 0px rgba(0, 0, 0, 0.07), inset 5px 8px 13px 0px rgba(0, 0, 0, 0.05), -10px -2px 7px 0px rgba(0, 0, 0, 0.15);
     height: calc(100% - 40px);
     width: calc(100% - 40px);
+  }
+
+  .react-clock__hand {
+    &__body {
+      background-color: @primary-black;
+      border-radius: 2px;
+    }
+  }
+
+  .react-clock__mark {
+    &__body {
+      background-color: @mark-colour;
+    }
+
+    &__number {
+      color: @primary-black;
+      font-size: 32px;
+    }
   }
 }

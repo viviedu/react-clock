@@ -21,12 +21,19 @@ export default function Sample() {
       <div className="Sample__container">
         <main className="Sample__container__content">
           <Clock
-            hourHandWidth={5}
-            minuteHandWidth={3}
+            hourHandLength={30}
+            hourHandWidth={8}
+            hourMarksLength={30}
+            hourMarksWidth={4}
+            hourHandOppositeLength={0}
+            minuteHandLength={50}
+            minuteHandWidth={7}
+            minuteHandOppositeLength={0}
             newUI={true}
+            renderMinuteMarks={false}
             renderNumbers={true}
-            secondHandLength={70}
-            secondHandWidth={2}
+            secondHandLength={87}
+            secondHandWidth={4}
             size={500}
             value={value}
           />
