@@ -88,15 +88,22 @@ export default function Clock({
     return hourMarks;
   }
 
+  function renderInnerRing() {
+    return <div className="react-clock__face-inner-ring" />;
+  }
+
   function renderFace() {
     if (newUI) {
       return (
-        <div className="react-clock__face-outer">
-          <div className="react-clock__face-inner">
-            {renderMinuteMarksFn()}
-            {renderHourMarksFn()}
+        <>
+          {renderInnerRing()}
+          <div className="react-clock__face-outer">
+            <div className="react-clock__face-inner">
+              {renderMinuteMarksFn()}
+              {renderHourMarksFn()}
+            </div>
           </div>
-        </div>
+        </>
       );
     } else {
       return (
