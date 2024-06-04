@@ -57,6 +57,7 @@ export default function Clock({
             angle={i * 6}
             length={minuteMarksLength}
             name="minute"
+            newUI={newUI}
             width={minuteMarksWidth}
           />,
         );
@@ -78,6 +79,7 @@ export default function Clock({
           angle={i * 30}
           length={hourMarksLength}
           name="hour"
+          newUI={newUI}
           number={renderNumbers ? (i * numbersMultiplier) : null}
           width={hourMarksWidth}
         />,

@@ -7,9 +7,24 @@ export default function Mark({
   angle = 0,
   length = 10,
   name,
+  newUI = false,
   width = 1,
   number,
 }) {
+  const bodyStyle = {
+    width: `${width}px`,
+    top: 0,
+    bottom: `${100 - (length / 2)}%`,
+  };
+
+  const bodyStyleNewUI = {
+    height: `${length}px`,
+    width: `${width}px`,
+    top: '15px'
+  };
+
+  const markTopDenominator = newUI ? 2.5 : 2;
+
   return (
     <div
       className={`react-clock__mark react-clock__${name}-mark`}
@@ -19,18 +34,14 @@ export default function Mark({
     >
       <div
         className={`react-clock__mark__body react-clock__${name}-mark__body`}
-        style={{
-          width: `${width}px`,
-          top: 0,
-          bottom: `${100 - (length / 2)}%`,
-        }}
+        style={newUI ? bodyStyleNewUI : bodyStyle}
       />
       {number && (
         <div
           className="react-clock__mark__number"
           style={{
             transform: `rotate(-${angle}deg)`,
-            top: `${length / 2}%`,
+            top: `${length / markTopDenominator}%`,
           }}
         >
           {number}

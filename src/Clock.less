@@ -1,3 +1,6 @@
+@primary-black: #282828;
+@mark-colour: #525252;
+
 .react-clock {
   display: block;
   position: relative;
@@ -39,14 +42,16 @@
     bottom: 0;
     left: 50%;
     right: 50%;
-
+    
     &__body {
+      background-color: @mark-colour;
       position: absolute;
-      background-color: black;
       transform: translateX(-50%);
     }
     
     &__number {
+      color: @primary-black;
+      font-size: 32px;
       position: absolute;
       left: -40px;
       width: 80px;
@@ -62,6 +67,8 @@
 }
 
 .react-clock.newUI {
+  font-family: 'Apercu Pro Regular', sans-serif;
+
   .react-clock__face-outer {
     position: absolute;
     top: 0;
