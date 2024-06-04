@@ -169,7 +169,7 @@ export default function Clock({
         length={secondHandLength}
         name="second"
         oppositeLength={secondHandOppositeLength}
-        renderKnob={newUI}
+        newUI={newUI}
         width={secondHandWidth}
       />
     );

@@ -32,8 +32,8 @@ export default function Sample() {
             newUI={true}
             renderMinuteMarks={false}
             renderNumbers={true}
-            secondHandLength={87}
-            secondHandWidth={4}
+            secondHandLength={88}
+            secondHandWidth={7}
             size={500}
             value={value}
           />

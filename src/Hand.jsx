@@ -8,7 +8,7 @@ export default function Hand({
   name,
   length = 100,
   oppositeLength = 10,
-  renderKnob = false,
+  newUI = false,
   width = 1,
 }) {
   return (
@@ -21,12 +21,14 @@ export default function Hand({
       <div
         className={`react-clock__hand__body react-clock__${name}-hand__body`}
         style={{
+          'box-shadow': 'inset 3px -3px 2px 0px rgba(0, 0, 0, 0.15)',
           width: `${width}px`,
           top: `${50 - (length / 2)}%`,
           bottom: `${50 - (oppositeLength / 2)}%`,
+          clipPath: (newUI && name === 'second') ? 'polygon(30% 0%,70% 0%,100% 100%,0% 100%)' : ''
         }}
       />
-      {renderKnob && <div className='react-clock__hand__body__center' ></div>}
+      {newUI && <div className='react-clock__hand__body__center' ></div>}
     </div>
   );
 }
