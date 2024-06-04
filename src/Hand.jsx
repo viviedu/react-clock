@@ -21,7 +21,7 @@ export default function Hand({
       <div
         className={`react-clock__hand__body react-clock__${name}-hand__body`}
         style={{
-          'box-shadow': 'inset 3px -3px 2px 0px rgba(0, 0, 0, 0.15)',
+          'box-shadow': 'inset 3px -3px 2px 0px rgba(0, 0, 0, 0.15), -3px 1px 5px 0px rgba(0, 0, 0, 0.2)',
           width: `${width}px`,
           top: `${50 - (length / 2)}%`,
           bottom: `${50 - (oppositeLength / 2)}%`,
