@@ -23,8 +23,8 @@ export default function Mark({
     top: '15px'
   };
 
-  const markTopDenominator = newUI ? 2.5 : 2;
 
+  const numberTopStyle = newUI ? `${length + 15}px` : `${length / 2}%`;
   return (
     <div
       className={`react-clock__mark react-clock__${name}-mark`}
@@ -41,7 +41,7 @@ export default function Mark({
           className="react-clock__mark__number"
           style={{
             transform: `rotate(-${angle}deg)`,
-            top: `${length / markTopDenominator}%`,
+            top: numberTopStyle
           }}
         >
           {number}

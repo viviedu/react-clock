@@ -72,6 +72,7 @@ export default function Clock({
       return null;
     }
 
+    const hourMarksLength = getHourMarksLength();
     const hourMarks = [];
     for (let i = 1; i <= 12; i += 1) {
       hourMarks.push(
@@ -199,13 +200,38 @@ export default function Clock({
     );
   }
 
+  function getFontSize() {
+    if (size < 350) {
+      return 18;
+    } else if (size < 400) {
+      return 24;
+    }
+
+    return 32;
+  }
+
+  function getHourMarksLength() {
+    if (!newUI) {
+      return hourMarksLength;
+    }
+
+    if (size < 350) {
+      return Math.min(10, hourMarksLength);
+    } else if (size < 450) {
+      return Math.min(20, hourMarksLength);
+    }
+
+    return Math.min(30, hourMarksLength);
+  }
+
   return (
     <time
       className={`${mergeClassNames('react-clock', className)} ${newUI ? 'newUI' : ''}`}
       dateTime={value instanceof Date ? value.toISOString() : value}
       style={{
+        fontSize: `${getFontSize()}px`,
         width: `${size}px`,
-        height: `${size}px`,
+        height: `${size}px`
       }}
     >
       {renderFace()}
