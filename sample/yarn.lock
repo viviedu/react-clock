@@ -1580,13 +1580,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wojtekmaj/date-utils@npm:^1.0.0":
-  version: 1.0.3
-  resolution: "@wojtekmaj/date-utils@npm:1.0.3"
-  checksum: 70b7152160529295319ead97e070f85a50c0eab7973b5845e3a58eab9b0c999023975d2739b5e2a059d27b108ce7cdbf14da99737d6fa3e3822d4dafb76b06f0
-  languageName: node
-  linkType: hard
-
 "@wojtekmaj/react-hooks@npm:^1.7.0":
   version: 1.11.1
   resolution: "@wojtekmaj/react-hooks@npm:1.11.1"
@@ -3893,13 +3886,6 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"merge-class-names@npm:^1.1.1":
-  version: 1.4.0
-  resolution: "merge-class-names@npm:1.4.0"
-  checksum: 443b6ff2d5ca78b3f38bce1a3f443c361d583ffadfe809a02aa86d70d00ac0d18ec4afbe86b2e51e927471e3e1fec94a81ccf0e7be788c122f8fe8ccefdc80db
-  languageName: node
-  linkType: hard
-
 "merge-descriptors@npm:1.0.1":
   version: 1.0.1
   resolution: "merge-descriptors@npm:1.0.1"
@@ -4760,7 +4746,6 @@ fsevents@~2.3.2:
     "@babel/preset-env": ^7.15.0
     "@babel/preset-react": ^7.14.0
     "@wojtekmaj/react-hooks": ^1.7.0
-    "@viviedu/react-clock": latest
     babel-loader: ^8.0.0
     css-loader: ^6.0.0
     html-webpack-plugin: ^5.1.0
@@ -4775,20 +4760,6 @@ fsevents@~2.3.2:
     webpack-dev-server: ^4.0.0
   languageName: unknown
   linkType: soft
-
-"@viviedu/react-clock@npm:latest":
-  version: 3.0.0
-  resolution: "@viviedu/react-clock@npm:3.0.0"
-  dependencies:
-    "@wojtekmaj/date-utils": ^1.0.0
-    merge-class-names: ^1.1.1
-    prop-types: ^15.6.0
-  peerDependencies:
-    react: ">=15.5"
-    react-dom: ">=15.5"
-  checksum: 2f93f15f5fc1e4961db809044612ee430978242b8a7d886b62c9a2e1a368d4b399e807377d9fb388eb01a2d0f333f21415229f7ab949291124c16d5b9ed07ed3
-  languageName: node
-  linkType: hard
 
 "react-dom@npm:^17.0.0":
   version: 17.0.2

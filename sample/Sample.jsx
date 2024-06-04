@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useSetInterval } from '@wojtekmaj/react-hooks';
-import Clock from '@viviedu/react-clock';
+import Clock from '../src/Clock';
 
+import '../src/Clock.less';
 import './Sample.less';
 
 export default function Sample() {
@@ -20,7 +21,12 @@ export default function Sample() {
       <div className="Sample__container">
         <main className="Sample__container__content">
           <Clock
-            size={200}
+            hourHandWidth={5}
+            minuteHandWidth={3}
+            renderNumbers={true}
+            secondHandLength={70}
+            secondHandWidth={2}
+            size={500}
             value={value}
           />
         </main>
