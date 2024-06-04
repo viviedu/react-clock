@@ -60,3 +60,30 @@
     }
   }
 }
+
+.react-clock.newUI {
+  .react-clock__face-outer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    border-radius: 50%;
+    box-shadow: inset -10px -9px 10px 0px rgba(0, 0, 0, 0.075), inset 5px 8px 13px 0px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+  }
+
+  .react-clock__face-inner {
+    position: absolute;
+    top: 20px;
+    bottom: 0;
+    left: 20px;
+    right: 0;
+
+    border-radius: 50%;
+    box-shadow: inset 20px 13px 16px 0px rgba(0, 0, 0, 0.07), inset 5px 8px 13px 0px rgba(0, 0, 0, 0.05), -10px -2px 7px 0px rgba(0, 0, 0, 0.15);
+    height: calc(100% - 40px);
+    width: calc(100% - 40px);
+  }
+}

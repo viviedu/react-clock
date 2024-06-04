@@ -26,6 +26,7 @@ export default function Clock({
   minuteHandWidth = 2,
   minuteMarksLength = 6,
   minuteMarksWidth = 1,
+  newUI = false,
   numbersMultiplier = 1,
   preciseSecondHandAngle = false,
   renderHourMarks = true,
@@ -86,12 +87,23 @@ export default function Clock({
   }
 
   function renderFace() {
-    return (
-      <div className="react-clock__face">
-        {renderMinuteMarksFn()}
-        {renderHourMarksFn()}
-      </div>
-    );
+    if (newUI) {
+      return (
+        <div className="react-clock__face-outer">
+          <div className="react-clock__face-inner">
+            {renderMinuteMarksFn()}
+            {renderHourMarksFn()}
+          </div>
+        </div>
+      );
+    } else {
+      return (
+        <div className="react-clock__face">
+          {renderMinuteMarksFn()}
+          {renderHourMarksFn()}
+        </div>
+      );
+    } 
   }
 
   function renderHourHandFn() {
@@ -162,7 +174,7 @@ export default function Clock({
 
   return (
     <time
-      className={mergeClassNames('react-clock', className)}
+      className={`${mergeClassNames('react-clock', className)} ${newUI ? 'newUI' : ''}`}
       dateTime={value instanceof Date ? value.toISOString() : value}
       style={{
         width: `${size}px`,
