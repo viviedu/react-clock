@@ -23,6 +23,7 @@ export default function Sample() {
           <Clock
             hourHandWidth={5}
             minuteHandWidth={3}
+            newUI={true}
             renderNumbers={true}
             secondHandLength={70}
             secondHandWidth={2}
