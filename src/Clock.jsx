@@ -15,6 +15,7 @@ import {
 } from './shared/propTypes';
 
 export default function Clock({
+  backgroundColor = '#fff',
   className,
   hourHandLength = 50,
   hourHandOppositeLength,
@@ -98,7 +99,7 @@ export default function Clock({
         <>
           {renderInnerRing()}
           {renderViviLogo()}
-          <div className="react-clock__face-outer">
+          <div className="react-clock__face-outer" style={{ backgroundColor }}>
             <div className="react-clock__face-inner">
               {renderMinuteMarksFn()}
               {renderHourMarksFn()}

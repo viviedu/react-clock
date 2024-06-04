@@ -2,6 +2,11 @@ export default function Clock(props: ClockProps): JSX.Element;
 export type ClockValue = string | Date;
 export interface ClockProps<T = ClockValue> {
     /**
+     * Background color of the clock face.
+     * @default "#fff"
+     */
+        backgroundColor?: string | undefined;
+    /**
      * Class name(s) that will be added along with "react-clock" to the main React-Clock <time> element.
      */
     className?: string | string[] | undefined;
