@@ -8,6 +8,7 @@ export default function Hand({
   name,
   length = 100,
   oppositeLength = 10,
+  renderKnob = false,
   width = 1,
 }) {
   return (
@@ -25,6 +26,7 @@ export default function Hand({
           bottom: `${50 - (oppositeLength / 2)}%`,
         }}
       />
+      {renderKnob && <div className='react-clock__hand__body__center' ></div>}
     </div>
   );
 }

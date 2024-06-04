@@ -1,5 +1,6 @@
-@primary-black: #282828;
 @mark-colour: #525252;
+@primary-black: #282828;
+@system-red: #E91816;
 
 .react-clock {
   display: block;
@@ -96,6 +97,17 @@
     &__body {
       background-color: @primary-black;
       border-radius: 2px;
+
+      &__center {
+        background-color: @system-red;
+        border-radius: 50%;
+        box-shadow: inset 3px -3px 2px 0px rgba(0, 0, 0, 0.1);
+        width: 20px;
+        height: 20px;
+        bottom: 48%;
+        position: absolute;
+        transform: translateX(-10px);
+      }
     }
   }
 
@@ -107,6 +119,12 @@
     &__number {
       color: @primary-black;
       font-size: 32px;
+    }
+  }
+
+  .react-clock__second-hand {
+    &__body {
+      background-color: @system-red;
     }
   }
 }
