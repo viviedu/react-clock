@@ -137,6 +137,7 @@ export default function Clock({
         angle={angle}
         length={hourHandLength}
         name="hour"
+        newUI={newUI}
         oppositeLength={hourHandOppositeLength}
         width={hourHandWidth}
       />
@@ -159,6 +160,7 @@ export default function Clock({
         angle={angle}
         length={minuteHandLength}
         name="minute"
+        newUI={newUI}
         oppositeLength={minuteHandOppositeLength}
         width={minuteHandWidth}
       />
