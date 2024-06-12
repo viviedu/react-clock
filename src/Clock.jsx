@@ -14,6 +14,9 @@ import {
   isMarkWidth,
 } from './shared/propTypes';
 
+
+const DEFAULT_SIZE = 500;
+
 export default function Clock({
   backgroundColor = '#fff',
   className,
@@ -39,7 +42,7 @@ export default function Clock({
   secondHandLength = 90,
   secondHandOppositeLength,
   secondHandWidth = 1,
-  size = 150,
+  size = DEFAULT_SIZE,
   value,
 }) {
   function renderMinuteMarksFn() {
@@ -201,13 +204,7 @@ export default function Clock({
   }
 
   function getFontSize() {
-    if (size < 350) {
-      return 18;
-    } else if (size < 400) {
-      return 24;
-    }
-
-    return 32;
+    return size * 0.064;
   }
 
   function getHourMarksLength() {
