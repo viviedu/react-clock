@@ -25,10 +25,10 @@ module.exports = {
           {
             loader: 'babel-loader',
             options: {
-              presets: ['@babel/preset-env', '@babel/preset-react'], // Add this line
-            },
-          },
-        ],
+              presets: ['@babel/preset-env', '@babel/preset-react']
+            }
+          }
+        ]
       },
       {
         test: /\.less$/,
@@ -57,6 +57,6 @@ module.exports = {
     historyApiFallback: true, // respond to 404s with index.html
     host: 'localhost',
     hot: true, // enable HMR on the server
-    port: 3002
+    port: 3000
   },
 };

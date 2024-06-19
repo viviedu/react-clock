@@ -23,7 +23,6 @@ export default function Mark({
     top: '0.3em'
   };
 
-
   const numberTopStyle = newUI ? `1.4em` : `${length / 2}%`;
   return (
     <div
