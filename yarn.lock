@@ -1754,6 +1754,33 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@viviedu/react-clock@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@viviedu/react-clock@workspace:."
+  dependencies:
+    "@babel/cli": ^7.15.0
+    "@babel/core": ^7.15.0
+    "@babel/preset-env": ^7.15.0
+    "@babel/preset-react": ^7.14.0
+    "@wojtekmaj/date-utils": ^1.0.0
+    "@wojtekmaj/enzyme-adapter-react-17": ^0.6.0
+    babel-eslint: ^10.0.0
+    enzyme: ^3.10.0
+    eslint: ~7.19.0
+    eslint-config-wojtekmaj: ^0.5.0
+    jest: ^27.0.0
+    less: ^4.0.0
+    merge-class-names: ^1.1.1
+    prop-types: ^15.6.0
+    react: ^17.0.0
+    react-dom: ^17.0.0
+    rimraf: ^3.0.0
+  peerDependencies:
+    react: ^15.5.0 || ^16.0.0 || ^17.0.0-0
+    react-dom: ^15.5.0 || ^16.0.0 || ^17.0.0-0
+  languageName: unknown
+  linkType: soft
+
 "@wojtekmaj/date-utils@npm:^1.0.0":
   version: 1.0.2
   resolution: "@wojtekmaj/date-utils@npm:1.0.2"
@@ -5812,33 +5839,6 @@ __metadata:
   checksum: 3c0d440a3f89d6d36844aa4dd57b5cdb0cab938a41956a16da743d3a3578ab32538fc41c16cc0984b6938f2ae4cbc0216967e9829e52191f70e32690d8e3445d
   languageName: node
   linkType: hard
-
-"@viviedu/react-clock@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "@viviedu/react-clock@workspace:."
-  dependencies:
-    "@babel/cli": ^7.15.0
-    "@babel/core": ^7.15.0
-    "@babel/preset-env": ^7.15.0
-    "@babel/preset-react": ^7.14.0
-    "@wojtekmaj/date-utils": ^1.0.0
-    "@wojtekmaj/enzyme-adapter-react-17": ^0.6.0
-    babel-eslint: ^10.0.0
-    enzyme: ^3.10.0
-    eslint: ~7.19.0
-    eslint-config-wojtekmaj: ^0.5.0
-    jest: ^27.0.0
-    less: ^4.0.0
-    merge-class-names: ^1.1.1
-    prop-types: ^15.6.0
-    react: ^17.0.0
-    react-dom: ^17.0.0
-    rimraf: ^3.0.0
-  peerDependencies:
-    react: ^15.5.0 || ^16.0.0 || ^17.0.0-0
-    react-dom: ^15.5.0 || ^16.0.0 || ^17.0.0-0
-  languageName: unknown
-  linkType: soft
 
 "react-dom@npm:^17.0.0":
   version: 17.0.1

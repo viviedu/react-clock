@@ -14,7 +14,11 @@ import {
   isMarkWidth,
 } from './shared/propTypes';
 
+
+const DEFAULT_SIZE = 500;
+
 export default function Clock({
+  backgroundColor = '#fff',
   className,
   hourHandLength = 50,
   hourHandOppositeLength,
@@ -26,6 +30,7 @@ export default function Clock({
   minuteHandWidth = 2,
   minuteMarksLength = 6,
   minuteMarksWidth = 1,
+  newUI = false,
   numbersMultiplier = 1,
   preciseSecondHandAngle = false,
   renderHourMarks = true,
@@ -37,7 +42,7 @@ export default function Clock({
   secondHandLength = 90,
   secondHandOppositeLength,
   secondHandWidth = 1,
-  size = 150,
+  size = DEFAULT_SIZE,
   value,
 }) {
   function renderMinuteMarksFn() {
@@ -56,6 +61,7 @@ export default function Clock({
             angle={i * 6}
             length={minuteMarksLength}
             name="minute"
+            newUI={newUI}
             width={minuteMarksWidth}
           />,
         );
@@ -69,6 +75,7 @@ export default function Clock({
       return null;
     }
 
+    const hourMarksLength = getHourMarksLength();
     const hourMarks = [];
     for (let i = 1; i <= 12; i += 1) {
       hourMarks.push(
@@ -77,6 +84,7 @@ export default function Clock({
           angle={i * 30}
           length={hourMarksLength}
           name="hour"
+          newUI={newUI}
           number={renderNumbers ? (i * numbersMultiplier) : null}
           width={hourMarksWidth}
         />,
@@ -85,13 +93,32 @@ export default function Clock({
     return hourMarks;
   }
 
+  function renderInnerRing() {
+    return <div className="react-clock__face-inner-ring" />;
+  }
+
   function renderFace() {
-    return (
-      <div className="react-clock__face">
-        {renderMinuteMarksFn()}
-        {renderHourMarksFn()}
-      </div>
-    );
+    if (newUI) {
+      return (
+        <>
+          {renderInnerRing()}
+          {renderViviLogo()}
+          <div className="react-clock__face-outer" style={{ backgroundColor }}>
+            <div className="react-clock__face-inner">
+              {renderMinuteMarksFn()}
+              {renderHourMarksFn()}
+            </div>
+          </div>
+        </>
+      );
+    } else {
+      return (
+        <div className="react-clock__face">
+          {renderMinuteMarksFn()}
+          {renderHourMarksFn()}
+        </div>
+      );
+    } 
   }
 
   function renderHourHandFn() {
@@ -110,6 +137,7 @@ export default function Clock({
         angle={angle}
         length={hourHandLength}
         name="hour"
+        newUI={newUI}
         oppositeLength={hourHandOppositeLength}
         width={hourHandWidth}
       />
@@ -132,6 +160,7 @@ export default function Clock({
         angle={angle}
         length={minuteHandLength}
         name="minute"
+        newUI={newUI}
         oppositeLength={minuteHandOppositeLength}
         width={minuteHandWidth}
       />
@@ -155,18 +184,53 @@ export default function Clock({
         length={secondHandLength}
         name="second"
         oppositeLength={secondHandOppositeLength}
+        newUI={newUI}
         width={secondHandWidth}
       />
     );
   }
 
+  function renderViviLogo() {
+    return (
+      <svg
+        fill="none"
+        height="33"
+        style={{ transform: `translateX(calc(${size / 2}px - 50%)) translateY(calc(-${size / 8}px - 50%))` }}
+        viewBox="0 0 32 33"
+        width="32"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path fillRule="evenodd" clipRule="evenodd" d="M22.2539 16.9656C22.2043 16.9656 22.1448 16.9062 22.1448 16.9062H22.1548L20.014 13.5266C19.9843 13.4672 20.0438 13.3581 20.0438 13.3581L29.0229 6.03413C29.0724 5.99448 29.1319 5.99448 29.1815 6.03413C29.2211 6.07377 29.231 6.14314 29.2013 6.1927L22.3629 16.9062C22.3332 16.9458 22.2539 16.9656 22.2539 16.9656ZM16.1688 16.8071L20.3015 20.1768V20.1668C20.3511 20.2065 20.361 20.2858 20.3313 20.3353L16.1291 26.926C16.0994 26.9656 16.0201 26.9854 16.0201 26.9854C15.9705 26.9854 15.9111 26.926 15.9111 26.926L2.84876 6.25221C2.80911 6.20265 2.82894 6.13328 2.86858 6.09363C2.90822 6.05399 3.02715 6.09363 3.02715 6.09363L16.03 16.6981L16.1688 16.8071Z" fill="#282828"/>
+      </svg>
+    );
+  }
+
+  function getFontSize() {
+    return size * 0.064;
+  }
+
+  function getHourMarksLength() {
+    if (!newUI) {
+      return hourMarksLength;
+    }
+
+    if (size < 350) {
+      return Math.min(10, hourMarksLength);
+    } else if (size < 450) {
+      return Math.min(20, hourMarksLength);
+    }
+
+    return Math.min(30, hourMarksLength);
+  }
+
   return (
     <time
-      className={mergeClassNames('react-clock', className)}
+      className={`${mergeClassNames('react-clock', className)} ${newUI ? 'newUI' : ''}`}
       dateTime={value instanceof Date ? value.toISOString() : value}
       style={{
+        fontSize: `${getFontSize()}px`,
         width: `${size}px`,
-        height: `${size}px`,
+        height: `${size}px`
       }}
     >
       {renderFace()}
