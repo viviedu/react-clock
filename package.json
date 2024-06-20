@@ -1,6 +1,6 @@
 {
   "name": "@viviedu/react-clock",
-  "version": "3.0.0-vivi6",
+  "version": "3.0.0-vivi7",
   "description": "An analog clock for your React app.",
   "main": "dist/umd/index.js",
   "module": "dist/esm/index.js",
