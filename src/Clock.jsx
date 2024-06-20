@@ -113,7 +113,7 @@ export default function Clock({
       );
     } else {
       return (
-        <div className="react-clock__face">
+        <div className="react-clock__face" style={{ backgroundColor }}>
           {renderMinuteMarksFn()}
           {renderHourMarksFn()}
         </div>
