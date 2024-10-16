@@ -104,6 +104,7 @@ export default function Clock({
           {renderClockFaceBackground()}
           {renderViviLogo()}
           {renderHourMarksFn()}
+          {renderMinuteMarksFn()}
         </>
       );
     } else {
