@@ -18,7 +18,7 @@ export default function Mark({
   };
 
   const bodyStyleNewUI = {
-    height: `0.8em`,
+    height: `0.9em`,
     width: `0.14em`,
     top: '0.8em'
   };
