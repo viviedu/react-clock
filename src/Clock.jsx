@@ -101,14 +101,10 @@ export default function Clock({
     if (newUI) {
       return (
         <>
-          {renderInnerRing()}
+          {renderClockFaceBackground()}
           {renderViviLogo()}
-          <div className="react-clock__face-outer" style={{ backgroundColor }}>
-            <div className="react-clock__face-inner">
-              {renderMinuteMarksFn()}
-              {renderHourMarksFn()}
-            </div>
-          </div>
+          {renderHourMarksFn()}
+          {renderMinuteMarksFn()}
         </>
       );
     } else {
@@ -119,6 +115,50 @@ export default function Clock({
         </div>
       );
     } 
+  }
+
+  function renderClockFaceBackground() {
+    return (
+      <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 501 501">
+        <defs>
+          <linearGradient id="linear-gradient" x1="98.94235" y1="448.57495" x2="401.94237" y2="54.57496" gradientTransform="translate(0 502) scale(1 -1)" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#fff"/>
+            <stop offset=".03631" stop-color="#efeeee"/>
+            <stop offset=".49263" stop-color="#fff"/>
+            <stop offset=".95817" stop-color="#eee"/>
+            <stop offset="1" stop-color="#ddd"/>
+          </linearGradient>
+          <linearGradient id="linear-gradient-2" x1="88.80537" y1="432.91348" x2="416.80537" y2="64.9135" gradientTransform="translate(0 502) scale(1 -1)" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#fff"/>
+            <stop offset=".915" stop-color="silver"/>
+          </linearGradient>
+          <linearGradient id="linear-gradient-3" x1="-506.74243" y1="-341.02759" x2="12.25759" y2="45.97241" gradientTransform="translate(44 -76) rotate(-90) scale(1 -1)" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#fff"/>
+            <stop offset="1" stop-color="#eee"/>
+          </linearGradient>
+          <linearGradient id="linear-gradient-4" x1="-431.59883" y1="-310.3156" x2="-156.08284" y2="-27.64358" gradientTransform="translate(48 -76) rotate(-90) scale(1 -1)" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#fefeff"/>
+            <stop offset="1" stop-color="#b8b8b8"/>
+          </linearGradient>
+          <linearGradient id="linear-gradient-5" x1="-423.16688" y1="-92.01687" x2="-145.00587" y2="124.96811" gradientTransform="translate(234 -68) rotate(-90) scale(1 -1)" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#fff"/>
+            <stop offset="1" stop-color="#eee"/>
+          </linearGradient>
+          <linearGradient id="linear-gradient-6" x1="-185.0686" y1="76.81581" x2="-469.5136" y2="-103.18423" gradientTransform="translate(238 -68) rotate(-90) scale(1 -1)" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="silver"/>
+            <stop offset=".5" stop-color="#e5e5e5"/>
+            <stop offset="1" stop-color="silver"/>
+          </linearGradient>
+        </defs>
+        <path class="cls-5" d="M250.5,0h0c138.34735,0,250.5,112.15266,250.5,250.5h0c0,138.34735-112.15265,250.5-250.5,250.5h0C112.15266,501,0,388.84735,0,250.5h0C0,112.15266,112.15266,0,250.5,0Z"/>
+        <path class="cls-2" d="M250.5,2h0c137.24277,0,248.5,111.25723,248.5,248.5h0c0,137.24277-111.25723,248.5-248.5,248.5h0C113.25723,499,2,387.74277,2,250.5h0C2,113.25723,113.25723,2,250.5,2Z"/>
+        <g>
+          <path class="cls-4" d="M21.5,250.5h0C21.5,124.02679,124.02679,21.5,250.5,21.5h0c126.47321,0,229,102.52679,229,229h0c0,126.47321-102.52679,229-229,229h0c-126.47321,0-229-102.52679-229-229Z"/>
+          <path class="cls-1" d="M23.5,250.5h0C23.5,125.13135,125.13135,23.5,250.5,23.5h0c125.36865,0,227,101.63135,227,227h0c0,125.36865-101.63135,227-227,227h0c-125.36865,0-227-101.63135-227-227Z"/>
+        </g>
+        <path class="cls-3" d="M126.5,250.5h0c0-68.4833,55.5167-124,124-124h0c68.4833,0,124,55.5167,124,124h0c0,68.4833-55.5167,124-124,124h0c-68.4833,0-124-55.5167-124-124Z"/>
+      </svg>
+    );
   }
 
   function renderHourHandFn() {
@@ -195,7 +235,7 @@ export default function Clock({
       <svg
         fill="none"
         height="33"
-        style={{ transform: `translateX(calc(${size / 2}px - 50%)) translateY(calc(-${size / 8}px - 50%))` }}
+        style={{ transform: `translateX(calc(${size / 2}px - 50%)) translateY(calc(-${size / 8}px - 830%))` }}
         viewBox="0 0 32 33"
         width="32"
         xmlns="http://www.w3.org/2000/svg"
