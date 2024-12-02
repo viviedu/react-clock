@@ -20,10 +20,10 @@ export default function Mark({
   const bodyStyleNewUI = {
     height: `0.9em`,
     width: `0.14em`,
-    top: '0.3em'
+    top: '0.8em'
   };
 
-  const numberTopStyle = newUI ? `1.4em` : `${length / 2}%`;
+  const numberTopStyle = newUI ? `1.8em` : `${length / 2}%`;
   return (
     <div
       className={`react-clock__mark react-clock__${name}-mark`}
