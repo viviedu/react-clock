@@ -195,7 +195,7 @@ export default function Clock({
       <svg
         fill="none"
         height="33"
-        style={{ transform: `translateX(calc(${size / 2}px - 50%)) translateY(calc(-${size / 8}px - 50%))` }}
+        style={{ transform: `translateX(calc(${size / 2}px - 50%)) translateY(calc(-${(2 * size) / 3}px))` }}
         viewBox="0 0 32 33"
         width="32"
         xmlns="http://www.w3.org/2000/svg"
